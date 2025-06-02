@@ -16,13 +16,13 @@ class BookmarkSearchBar extends StatelessWidget {
   final VoidCallback onClose;
 
   const BookmarkSearchBar({
-    Key? key,
+    super.key,
     required this.initialQuery,
     required this.onQueryChanged,
     required this.onPrev,
     required this.onNext,
     required this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

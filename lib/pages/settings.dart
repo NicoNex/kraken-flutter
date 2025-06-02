@@ -69,7 +69,7 @@ class AppSettings {
 
 /// A page that allows the user to update the API base URL and choose a theme mode.
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({super.key});
 
   @override
   SettingsPageState createState() => SettingsPageState();

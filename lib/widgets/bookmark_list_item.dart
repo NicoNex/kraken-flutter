@@ -12,12 +12,12 @@ class BookmarkListItem extends StatelessWidget {
   final bool isMatch;
 
   const BookmarkListItem({
-    Key? key,
+    super.key,
     required this.cardKey,
     required this.data,
     required this.searchQuery,
     required this.isMatch,
-  }) : super(key: key);
+  });
 
   /// If [query] is empty, returns a normal SelectableText.
   /// Otherwise builds a SelectableText.rich with highlighted spans.

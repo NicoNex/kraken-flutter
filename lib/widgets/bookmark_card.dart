@@ -9,10 +9,10 @@ class BookmarkCard extends StatelessWidget {
   final Color outlineColor;
 
   const BookmarkCard({
-    Key? key,
+    super.key,
     required this.filename,
     required this.outlineColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

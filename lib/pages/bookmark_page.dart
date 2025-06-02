@@ -9,10 +9,10 @@ class BookmarkPage extends StatefulWidget {
   final Future<Map<String, dynamic>>? prefetchData;
 
   const BookmarkPage({
-    Key? key,
+    super.key,
     required this.filename,
     this.prefetchData,
-  }) : super(key: key);
+  });
 
   @override
   State<BookmarkPage> createState() => _BookmarkPageState();
