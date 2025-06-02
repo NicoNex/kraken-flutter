@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
-import 'settings.dart';
-import 'homepage.dart';
+
+import 'pages/settings.dart';
+import 'pages/main_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Wrap MaterialApp in a ValueListenableBuilder so it rebuilds when the theme changes.
+    // Rebuilds when the user changes the themeMode in AppSettings
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: AppSettings.themeModeNotifier,
       builder: (context, themeMode, child) {
@@ -24,7 +25,10 @@ class MyApp extends StatelessWidget {
                 ColorScheme.fromSeed(seedColor: Colors.blue);
             final ColorScheme darkScheme = darkDynamic?.harmonized() ??
                 ColorScheme.fromSeed(
-                    seedColor: Colors.blue, brightness: Brightness.dark);
+                  seedColor: Colors.blue,
+                  brightness: Brightness.dark,
+                );
+
             return MaterialApp(
               title: 'Kraken',
               themeMode: themeMode,
